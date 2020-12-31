@@ -1,0 +1,13 @@
+{
+    "name": "Product",
+    "alias": "product",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Admin\\Product\\Providers\\ProductServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
