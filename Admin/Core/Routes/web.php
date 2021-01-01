@@ -1,5 +1,5 @@
 <?php
-
+use Inertia\Inertia;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +11,12 @@
 |
 */
 
-Route::prefix('core')->group(function() {
-    Route::get('/', 'CoreController@index');
+use Illuminate\Support\Facades\Route;
+
+Route::middleware(['auth:sanctum', 'verified'])->group(function(){
+    Route::prefix('dashboard')->group(function() {
+        Route::get('/', function(){
+            return Inertia\Inertia::render('Dashboard');
+        })->name('dashboard');
+    });    
 });
